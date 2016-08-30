@@ -1,0 +1,3 @@
+1	Node.js 是一个可以让JavaScript运行在服务器端的平台。
+2	Node.js 是一个为了实时Web(real-time Web)而诞生的平台。
+3	Node.js 是由Ryan Dahl 发起的开源项目，诞生于2009年。虽然它还很年轻，但是它的周围已经形成了一个庞大的生态系统了。
