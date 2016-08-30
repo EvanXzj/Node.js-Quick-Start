@@ -1,5 +1,5 @@
-//exports 是模块公开的借口
-//reqiure 获取模块内reports的借口
+//exports 是模块公开的接口
+//reqiure 获取模块内reports的接口
 var name
 
 exports.setName=function(tname){
