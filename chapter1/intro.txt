@@ -1,3 +1,34 @@
-1	Node.js 是一个可以让JavaScript运行在服务器端的平台。
-2	Node.js 是一个为了实时Web(real-time Web)而诞生的平台。
-3	Node.js 是由Ryan Dahl 发起的开源项目，诞生于2009年。虽然它还很年轻，但是它的周围已经形成了一个庞大的生态系统了。
+Node.js 简单介绍
+	1	Node.js 是一个可以让JavaScript运行在服务器端的平台。
+	2	Node.js 是一个为了实时Web(real-time Web)而诞生的平台。
+	3	Node.js 是由Ryan Dahl 发起的开源项目，诞生于2009年。虽然它还很年轻，但是它的周围已经形成了一个庞大的生态系统了。
+	4	Node.js 不是一门独立的语言。
+
+Node.js 能做什么？
+	1	具有复杂逻辑的网站
+	2	基于社交网络的大规模Web应用
+	3	Web Socket 服务器
+	4	命令行工具
+	5	单元测试工具
+	......
+
+Node.js 的特点
+	1	Node.js 最大的特点就是采用异步式 I/O 与事件驱动的架构设计
+	2	Node.js 使用的是单线程模型，对于所有 I/O 都采用异步式的请求方式
+
+安装和配置Node.js(windows环境下)
+	1	安装
+		在 Windows 上安装 Node.js 你只需要访问http://nodejs.org，点击Download链接，然后选择Windows
+		Installer，下载安装包。打开下载好的安装包，一直点击NEXT即可。
+
+	2	检测安装
+		win+R 输入cmd进入命令行，然后输入node -v 如果输出相应node版本号即安装成功。
+		
+	3	安装编码工具(选择自己喜爱的就好)
+		Sublime Text
+		Nodepad++
+		Ultraedit
+		......
+
+
+
