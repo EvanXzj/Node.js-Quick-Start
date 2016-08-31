@@ -1,0 +1,58 @@
+全局对象
+   JavaScript中有一个特殊的对象，称为全局对象（Global Object），它及其所有属性都可以在程序的任何地方访问，即全局变量
+
+process
+	process 是一个全局变量，即global 对象的属性,它用于描述当前 Node.js进程状态的对象，提供了一个与操作系统的简单接口
+	
+	process.argv是命令行参数数组， 第一个元素是 node，第二个元素是脚本文件名，从第三个元素开始每个元素是一个运行参数
+
+	process.stdout 是标准输出流
+
+	process.stdin 标准输入流。初始时它是被暂停的，你必须恢复流才能使用，并手动编写流的事件响应函数。
+
+	......
+
+util
+	util 是一个 Node.js 核心模块，提供常用函数的集合，用于弥补核心 JavaScript 的功能过于精简的不足。
+
+	util.inherits(constructor, superConstructor) 是一个实现对象间'原型'继承的函数.
+
+	util.inspect(object,[showHidden],[depth],[colors]) 是一个将任意对象转换为字符串的方法，通常用于调试和错误输出
+
+	......
+
+事件驱动  events
+	1,事件发射器
+
+	events 模块只提供了一个对象：events.EventEmitter。EventEmitter 的核心就是事件发射与事件监听器功能的封装
+
+	常用API：
+		EventEmitter.on(event, listener)为指定事件注册一个监听器，接受一个字符串event和一个回调函数listener。
+
+		EventEmitter.emit(event, [arg1], [arg2], [...]) 发射event事件，传递若干可选参数到事件监听器的参数表。
+
+		EventEmitter.once(event,listener)为指定事件注册一个单次监听器(只触发一次)，触发后立刻解除该监听器。
+
+		EventEmitter.removeListener(event, listener)移除指定事件的某个监听器,listener必须是该事件注册过的监听器。
+
+		EventEmitter.removeAllListeners([event]) 移除所有事件的所有监听器。如果指定event,则移除指定事件的所有监听器
+
+		......
+
+	2,error事件
+		EventEmitter 定义了一个特殊的事件error ，它包含了“错误”的语义，我们在遇到异常的时候通常会发射 error事件。
+
+		当error 被发射时， EventEmitter 规定如果没有响应的监听器，Node.js 会把它当作异常，退出程序并打印调用栈。
+
+		我们一般要为会发射 error事件的对象设置监听器，避免遇到错误后整个程序崩溃。例如：
+
+		var events = require('events');
+
+		var emitter = new events.EventEmitter();
+
+		emitter.emit('error');
+
+		运行时则会抛出异常，打印调用堆栈。
+
+
+
