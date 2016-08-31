@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	form(method='post').form-horizontal
+		fieldset
+			legend 用户注册
+		div.control-group
+			label(for='username').control-label 用户名
+			div.controls
+				input(type='text',class='input-xlarge',id='username',name='username')
+				p.help-block 你的账户名称，用于登录和显示
+		div.control-group
+			label(for='password').control-label 密码
+			div.controls
+				input(type='password',id='password',name='password').input-xlarge
+		div.control-group
+			label(for='password2').control-label 确认密码
+			div.controls
+				input(type='password',id='password2',name='password2').input-xlarge
+		div.form-actions
+			button(type='submit',class='btn btn-primary') 注册
